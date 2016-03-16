@@ -8,7 +8,8 @@ mongoose.connect('mongodb://localhost/commentDB'); //Connects to a mongo databas
 
 var commentSchema = mongoose.Schema({ //Defines the Schema for this database
   Name: String,
-  Comment: String
+  Comment: String,
+  Animal: String
 });
 
 var Comment = mongoose.model('Comment', commentSchema); //Makes an object from that schema as a model

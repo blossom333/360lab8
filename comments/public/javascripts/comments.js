@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#serialize").click(function(){
-        var myobj = {Name:$("#Name").val(),Comment:$("#Comment").val()};
+        var myobj = {Name:$("#Name").val(),Comment:$("#Comment").val(),Animal:$("#Animal").val()};
         jobj = JSON.stringify(myobj);
         $("#json").text(jobj);
 	var url = "comment";
@@ -17,7 +17,7 @@ $(document).ready(function(){
         var everything = "<ul>";
         for(var comment in data) {
           com = data[comment];
-          everything += "<li>Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
+          everything += "<li>Name: " + com.Name + " -- Comment: " + com.Comment + " -- Favorite Animal: " + com.Animal + "</li>";
         }
         everything += "</ul>";
         $("#comments").html(everything);
